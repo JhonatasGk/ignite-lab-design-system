@@ -15,8 +15,8 @@ module.exports = {
         DEFAULT: '#121214',
         '100' : '#E1E1E6',
         '200' : '#C4C4CC',
-        '400': '#7C7C8A',
-        '800': '#202024',
+        '600' : '#7C7C8A',
+        '800' : '#202024',
         '900' : '#121214',
       },
       cyan:{
@@ -39,10 +39,14 @@ module.exports = {
       white: '#fff',
       transparent: 'transparent',
     },
+    
     extend: {
       fontFamily:{
         sans: 'Inter, sans-serif'
-      }
+      },
+      maxWidth:{
+        sm: '22rem'
+      },
     },
   },
   plugins: [],
