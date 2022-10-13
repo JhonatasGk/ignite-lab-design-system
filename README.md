@@ -25,7 +25,7 @@ https://ignite-lab-design-system-ruddy.vercel.app
 Design in Figma:
 
 ```
-<p style="color:white">[https://www.figma.com/file/lrj2R4YcBNhKwj6P9bbUfz/ReactLab---Designer-System?node-id=0%3A1](https://www.figma.com/file/lrj2R4YcBNhKwj6P9bbUfz/ReactLab---Designer-System?node-id=0%3A1)</p>
+https://www.figma.com/file/lrj2R4YcBNhKwj6P9bbUfz/ReactLab---Designer-System?node-id=0%3A1
 ```
 
 ---
