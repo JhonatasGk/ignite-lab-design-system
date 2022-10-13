@@ -1,7 +1,7 @@
 <div align="center">
 <img src='https://user-images.githubusercontent.com/62631029/195713826-84505930-6f6c-4b45-966d-0b6c5d53fad5.png' style='border-radius:10px;' >
 
-<h1>React Lab #03 - React Design System </h1>
+<h1>Ignite Lab #03 - React Design System </h1>
 <p>  React design systems with Storybook <br> and a simple interface using the components of the design system.  </p>
         <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/JhonatasGk/ignite-lab-design-system" />
 </div>
