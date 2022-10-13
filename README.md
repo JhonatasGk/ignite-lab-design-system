@@ -37,7 +37,7 @@ https://www.figma.com/file/lrj2R4YcBNhKwj6P9bbUfz/ReactLab---Designer-System?nod
 - [x] Input
 - [x] Text
 - [x] Heading
-- []🚧 Others.. 🚧
+- [ ] Others.. 🚧
 
 ## Techs
 
