@@ -1,12 +1,15 @@
+import { useState } from 'react'
 import { Icon } from '@iconify/react'
 import { Button } from './components/Button/Button'
 import { Checkbox } from './components/Checkbox/Checkbox'
 import { Heading } from './components/Heading/Heading'
 import { Text } from './components/Text/Text'
-import { TextInput } from './components/TextInput/TextInput'
+import { InputField } from './components/InputField/InputField'
 import './styles/global.css'
 
 export function App() {
+  const [hasHide, setHasHide] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
   return (
     <div className='w-screen h-screen flex-col  bg-gray-900 flex items-center justify-center '>
       <header className='flex flex-col items-center justify-center'>
@@ -25,33 +28,53 @@ export function App() {
       </header>
       <form
         action=''
+        onSubmit={e => {
+          setIsLoading(true)
+          e.preventDefault()
+          setTimeout(() => {
+            setIsLoading(false)
+          }, 3000)
+        }}
         className='flex flex-col w-full max-w-sm mt-10  gap-4 items-stretch'
       >
         <label htmlFor='email' className='flex flex-col gap-3'>
           <Text className='font-semibold'>Endereço de e-mail</Text>
-          <TextInput.Root>
-            <TextInput.Icon>
+          <InputField.Root>
+            <InputField.Icon>
               <Icon icon='mdi:email-outline' />
-            </TextInput.Icon>
-            <TextInput.Input
+            </InputField.Icon>
+            <InputField.Input
               id='email'
               type='email'
               placeholder='johndoe@example.com'
             />
-          </TextInput.Root>
+          </InputField.Root>
         </label>
         <label htmlFor='password' className='flex flex-col gap-3 '>
           <Text className='font-semibold'>Sua senha</Text>
-          <TextInput.Root>
-            <TextInput.Icon>
+          <InputField.Root>
+            <InputField.Icon>
               <Icon icon='mdi:lock-outline' />
-            </TextInput.Icon>
-            <TextInput.Input
-              id='password'
-              type='password'
-              placeholder='***********'
+            </InputField.Icon>
+            <InputField.Input
+              id={hasHide ? 'text' : 'password'}
+              type={hasHide ? 'text' : 'password'}
+              placeholder={hasHide ? 'your password' : '**********'}
             />
-          </TextInput.Root>
+            <Button
+              state='ghost'
+              type='button'
+              onClick={() => {
+                setHasHide(!hasHide)
+              }}
+            >
+              <InputField.Icon>
+                <Icon
+                  icon={hasHide ? 'mdi:eye-off-outline' : 'mdi:eye-outline'}
+                />
+              </InputField.Icon>
+            </Button>
+          </InputField.Root>
         </label>
         <label htmlFor='remember' className='flex items-center gap-2'>
           <Checkbox id='remember' />
@@ -59,7 +82,11 @@ export function App() {
             Lembrar de mim!
           </Text>
         </label>
-        <Button type='submit' state='enabled' className='mt-4 '>
+        <Button
+          type='submit'
+          state={isLoading ? 'loading' : 'enabled'}
+          className='mt-4'
+        >
           Entrar
         </Button>
       </form>

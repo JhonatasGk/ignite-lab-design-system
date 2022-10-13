@@ -11,14 +11,18 @@ export default {
     state: 'enabled'
   },
   argTypes: {
+    children: { name: 'Label' },
     state: {
-      options: ['disabled', 'enabled', 'loading'],
+      options: ['disabled', 'enabled', 'loading', 'ghost'],
       control: { type: 'inline-radio' }
     },
     asChild: {
       table: {
         disable: true
       }
+    },
+    className: {
+      table: { disable: true }
     }
   }
 } as Meta<ButtonProps>
@@ -31,9 +35,11 @@ export const Disabled: StoryObj<ButtonProps> = {
 }
 export const Loading: StoryObj<ButtonProps> = {
   args: {
-    children: (
-      <Icon icon='line-md:loading-twotone-loop' width='24' height='24' />
-    ),
     state: 'loading'
+  }
+}
+export const Ghost: StoryObj<ButtonProps> = {
+  args: {
+    state: 'ghost'
   }
 }
