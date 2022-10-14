@@ -1,5 +1,5 @@
 <div align="center">
-<img src='https://user-images.githubusercontent.com/62631029/195734496-3379d51d-f255-420e-beb6-26912e3fa629.png' style='border-radius:10px;width:100%' >
+<img src='https://user-images.githubusercontent.com/62631029/195735490-af10c5f4-6666-4cb7-9cb1-dfc842245e01.png' style='border-radius:10px;width:100%' >
 
 <h1>Ignite Lab #03 - React Design System </h1>
 <p>  React design systems with Storybook <br> and a simple interface using the components of the design system.  </p>
